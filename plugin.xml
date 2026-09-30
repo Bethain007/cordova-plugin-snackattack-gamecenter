@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-snackattack-gamecenter" version="1.0.0">
+  <name>Snack Attack Game Center</name>
+  <engines><engine name="cordova-ios" version=">=6.0.0" /></engines>
+  <js-module src="gamecenter.js" name="SnackAttackGameCenter">
+    <clobbers target="snackAttackGameCenter" />
+  </js-module>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="SnackAttackGameCenter"><param name="ios-package" value="SnackAttackGameCenter" /></feature>
+    </config-file>
+    <config-file target="*/Entitlements-Debug.plist" parent="com.apple.developer.game-center"><true /></config-file>
+    <config-file target="*/Entitlements-Release.plist" parent="com.apple.developer.game-center"><true /></config-file>
+    <framework src="GameKit.framework" />
+    <header-file src="SnackAttackGameCenter.h" />
+    <source-file src="SnackAttackGameCenter.m" />
+  </platform>
+</plugin>
