@@ -7,4 +7,6 @@
 - (void)auth:(CDVInvokedUrlCommand *)command;
 - (void)status:(CDVInvokedUrlCommand *)command;
 - (void)completeImpulsePurchase:(CDVInvokedUrlCommand *)command;
+- (void)completeAchievement:(CDVInvokedUrlCommand *)command;
+- (void)reportCommand:(CDVInvokedUrlCommand *)command achievementID:(NSString *)achievementID;
 @end

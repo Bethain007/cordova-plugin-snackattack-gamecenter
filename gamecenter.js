@@ -4,3 +4,7 @@ exports.status = function (ok, fail) { exec(ok, fail, 'SnackAttackGameCenter', '
 exports.completeImpulsePurchase = function (playerId, ok, fail) {
   exec(ok, fail, 'SnackAttackGameCenter', 'completeImpulsePurchase', [playerId]);
 };
+
+exports.completeAchievement = function (achievementId, playerId, ok, fail) {
+  exec(ok, fail, 'SnackAttackGameCenter', 'completeAchievement', [playerId, achievementId]);
+};
