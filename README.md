@@ -1,6 +1,6 @@
-# Snack Attack Game Center plugin — version 2
+# Snack Attack Game Center plugin — version 2.1
 
-Native Cordova iOS bridge for Snack Attack's 92-achievement catalog. The original `com.games433.snackattack.impulse_purchase` identifier and API remain supported.
+Native Cordova iOS bridge for Snack Attack's 96-achievement catalog. The original `com.games433.snackattack.impulse_purchase` identifier and API remain supported.
 
 **Version 1's Impulse Purchase automatic-export pipeline was reported working on device by the project owner. Version 2's expanded catalog still needs a new automatic iOS build and iPhone validation.** Local Cordova packaging and JavaScript simulation tests do not prove native functionality.
 
@@ -18,3 +18,5 @@ snackAttackGameCenter.completeAchievement(achievementId, expectedGamePlayerId, s
 Authentication uses Apple's native UI. Completion accepts only catalog IDs, checks Apple's existing achievements, reports 100 percent only when incomplete, and sets `GKAchievement.showsCompletionBanner = YES`. There is no custom banner, achievement screen, backend, or reset API. Call completion only after a qualifying achievement condition succeeds. The GDevelop extension owns lifetime counters, unlock state and the persistent retry queue; this bridge alone does not queue failed reports. Reports verify the expected Game Center player before and after asynchronous work.
 
 Pin the Cordova dependency to an immutable Git commit. Keep the GitHub repository public so a cloud builder can download it without credentials. This repository contains only the plugin, not the game or signing credentials.
+
+Version 2.1 adds four reach-round achievements: reach_round_5_10, reach_round_10_10, reach_round_15_10 and reach_round_20_10, under the existing com.games433.snackattack. prefix. These count distinct runs reaching each round and unlock optional starting rounds in the GDevelop project. Native validation is still required.

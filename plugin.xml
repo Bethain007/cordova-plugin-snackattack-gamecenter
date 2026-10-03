@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-snackattack-gamecenter" version="2.0.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-snackattack-gamecenter" version="2.1.0">
   <name>Snack Attack Game Center</name>
   <engines><engine name="cordova-ios" version=">=6.0.0" /></engines>
   <js-module src="gamecenter.js" name="SnackAttackGameCenter">
