@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-snackattack-gamecenter" version="2.1.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-snackattack-gamecenter" version="2.2.0">
   <name>Snack Attack Game Center</name>
   <engines><engine name="cordova-ios" version=">=6.0.0" /></engines>
   <js-module src="gamecenter.js" name="SnackAttackGameCenter">
     <clobbers target="snackAttackGameCenter" />
   </js-module>
   <platform name="ios">
+    <js-module src="deeplinks.js" name="SnackAttackDeepLinks"><runs /></js-module>
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+      <array><dict>
+        <key>CFBundleURLName</key><string>com.games433.snackattack.events</string>
+        <key>CFBundleURLSchemes</key><array><string>com.games433.snackattack</string></array>
+        <key>CFBundleTypeRole</key><string>Editor</string>
+      </dict></array>
+    </config-file>
     <config-file target="config.xml" parent="/*">
       <feature name="SnackAttackGameCenter"><param name="ios-package" value="SnackAttackGameCenter" /></feature>
     </config-file>

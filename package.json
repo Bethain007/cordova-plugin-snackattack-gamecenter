@@ -1,9 +1,9 @@
 {
   "name": "cordova-plugin-snackattack-gamecenter",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Snack Attack native Game Center achievement bridge",
   "license": "UNLICENSED",
   "cordova": { "id": "cordova-plugin-snackattack-gamecenter", "platforms": ["ios"] },
-  "files": ["plugin.xml", "SnackAttackGameCenter.h", "SnackAttackGameCenter.m", "gamecenter.js"],
+  "files": ["plugin.xml", "SnackAttackGameCenter.h", "SnackAttackGameCenter.m", "gamecenter.js", "deeplinks.js"],
   "keywords": ["ecosystem:cordova", "cordova-ios"]
 }

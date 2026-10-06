@@ -20,3 +20,7 @@ Authentication uses Apple's native UI. Completion accepts only catalog IDs, chec
 Pin the Cordova dependency to an immutable Git commit. Keep the GitHub repository public so a cloud builder can download it without credentials. This repository contains only the plugin, not the game or signing credentials.
 
 Version 2.1 adds four reach-round achievements: reach_round_5_10, reach_round_10_10, reach_round_15_10 and reach_round_20_10, under the existing com.games433.snackattack. prefix. These count distinct runs reaching each round and unlock optional starting rounds in the GDevelop project. Native validation is still required.
+
+## Native event URL (v2.2.0)
+
+Registers `com.games433.snackattack://shop/outfits?event=halloween_2026` on iOS. The Cordova module captures valid cold/warm-start URLs before `deviceready`; the GDevelop project selects Shop tab 4 after normal startup/account loading. Only this display route is accepted; URLs cannot purchase or grant content. Game Center native source and entitlements are unchanged. Local packaging/routing tests are available; signed iPhone deep-link testing is still required.
